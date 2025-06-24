@@ -55,7 +55,7 @@ const Admin = () => {
     files.forEach((f) => formData.append("images", f.file));
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/products", {
+      const res = await fetch("https://sleekwithdeals.onrender.com/products", {
         method: "POST",
         body: formData,
       });

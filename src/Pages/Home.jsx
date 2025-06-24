@@ -6,7 +6,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/products")
+    fetch("https://sleekwithdeals.onrender.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -35,7 +35,7 @@ const Home = () => {
             onClick={() => navigate(`/product/${product.id}`)}
           >
             <img
-              src={`http://127.0.0.1:8000${product.images[0]}`}
+              src={`https://sleekwithdeals.onrender.com${product.images[0]}`}
               alt={product.name}
               style={{
                 width: "100%",

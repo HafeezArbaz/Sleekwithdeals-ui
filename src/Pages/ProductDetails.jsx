@@ -12,7 +12,7 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/products")
+    fetch("https://sleekwithdeals.onrender.com/products")
       .then((res) => res.json())
       .then((data) => {
         const selected = data.find((item) => item.id.toString() === id);
@@ -48,7 +48,7 @@ const ProductDetails = () => {
           {product.images.map((img, idx) => (
             <SwiperSlide key={idx}>
               <img
-                src={`http://127.0.0.1:8000${img}`}
+                src={`https://sleekwithdeals.onrender.com${img}`}
                 alt={`Product ${idx + 1}`}
                 style={{
                   width: "100%",
